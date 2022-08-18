@@ -15,6 +15,7 @@ import java.io.*
 
 class DownloadFile {
 
+    /* Begin of class [Int the name of God the most ]*/
     private var mTag = DownloadFile::class.java.simpleName
     private var mURL: String? = null
     private var appName: String = "defaultName"
@@ -26,11 +27,9 @@ class DownloadFile {
 
     lateinit var mContext: Context
     private var mJob: Job? = null
+
     private val coroutineExceptionHandler = CoroutineExceptionHandler { context, throwable ->
-        Log.e(
-            mTag,
-            "coroutineExceptionHandler -> ${throwable.message} - ${throwable.printStackTrace()}"
-        )
+        Log.e(mTag, "coroutineExceptionHandler -> ${throwable.message} - ${throwable.printStackTrace()}")
         getListener()?.onDownloadFiled(throwable.message, false)
     }
 
@@ -65,7 +64,6 @@ class DownloadFile {
                 return
             }
         }
-
 
         if (!isConnect(mContext)) {
             mOnItemResultListener?.onNoInternetConnect(false,"Plz check Internet connection !!!")
@@ -107,10 +105,6 @@ class DownloadFile {
             var responseResult = mApiServices.downloadFileByUrl(mURL)
 
             if (responseResult.isSuccessful) {
-//                responseResult.body()?.let {
-
-//                    val task = object : AsyncTask<Void, Void, Void>() {
-//                        override fun doInBackground(vararg voids: Void): Void? {
 
                 responseResult.body()?.let {
                     val writtenToDisk = writeResponseBodyToDiskAndDeployment(it, appName)
@@ -128,44 +122,17 @@ class DownloadFile {
                         }
                     }
                 }
-//                            return null
-//                        }
-//                    }
-//                    task.execute()
 
-//                }
             } else {
                 Log.e(
-                    mTag,
-                    "Response Err Error -> ${responseResult.message()} -  ${responseResult.code()}"
-                )
+                    mTag, "Response Err Error -> ${responseResult.message()} -  ${responseResult.code()}")
                 withContext(Dispatchers.Main) {
                     getListener()?.onError("${responseResult.message()} - ${responseResult.code()}")
                 }
             }
 
 
-            /*
-            if (responseResult.isSuccessful) {
-                responseResult.body()?.let {
-                    val writtenToDisk = writeResponseBodyToDiskFFFFFFFFF(it, appName)
-                    withContext(Dispatchers.Main) {
-                        if (writtenToDisk) {
-                            getListener()?.onFinish()
-                            getListener()?.onDownloadSuccess(true)
-                        } else {
-                            getListener()?.onDownloadFiled(responseResult.message(), false)
-                        }
-                    }
-                }
-            } else {
-                Log.e(
-                    mTag,
-                    "Response Err Error -> ${responseResult.message()} -  ${responseResult.code()}"
-                )
-                getListener()?.onError("${responseResult.message()} - ${responseResult.code()}")
-            }
-             */
+
         }
 
     }
@@ -186,7 +153,6 @@ class DownloadFile {
         fun onDownloadFiled(message: String?, status: Boolean)
         fun onPermissionResult(permission: Boolean, message: String)
     }
-
 
     private fun writeResponseBodyToDiskAndDeployment(body: ResponseBody, appName: String): Boolean {
 
