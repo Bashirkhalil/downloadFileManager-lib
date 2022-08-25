@@ -304,6 +304,7 @@ class DownloadFile {
         fun onError(message: String)
         fun onNoInternetConnect(status: Boolean, message: String)
         fun onDownloadSuccess(status: Boolean)
+        fun onDownloadProgress(fileSize: Long, fileSizeDownloaded: Long, value: Int)
         fun onDownloadFiled(message: String?, status: Boolean)
         fun onPermissionResult(permission: Boolean, message: String)
     }
@@ -366,9 +367,11 @@ class DownloadFile {
             var inputStream: InputStream? = null
             var outputStream: OutputStream? = null
             try {
+
                 val fileReader = ByteArray(4096)
                 val fileSize = body.contentLength()
                 var fileSizeDownloaded: Long = 0
+
                 inputStream = body.byteStream()
                 outputStream = FileOutputStream(futureStudioIconFile)
                 while (true) {
@@ -378,11 +381,13 @@ class DownloadFile {
                     }
                     outputStream.write(fileReader, 0, read)
                     fileSizeDownloaded += read.toLong()
+
+                    var  value = (((fileSizeDownloaded * 100) / fileSize).toInt())
+
+                    getListener()?.onDownloadProgress(fileSize,fileSizeDownloaded,value)
                 }
-                Log.e(
-                    mTag,
-                    "file download: $fileSizeDownloaded of $fileSize - ${fileSizeDownloaded / 1024} MB"
-                )
+
+                Log.e(mTag, "file download: $fileSizeDownloaded of $fileSize - ${fileSizeDownloaded / 1024} MB")
                 outputStream.flush()
                 true
             } catch (e: IOException) {
