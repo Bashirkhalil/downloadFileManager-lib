@@ -15,16 +15,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+/*
 //       var  url ="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2017/11/04133712/waterfall.jpg"
 //       var  url ="http://shouji.360tpcdn.com/170918/93d1695d87df5a0c0002058afc0361f1/com.ss.android.article.news_636.apk"
         var  url ="http://shouji.360tpcdn.com/170918/f7aa8587561e4031553316ada312ab38/com.tencent.qqlive_13049.apk"
 //       var  url ="https://cdn.apedesign.net/github/logo.png"
 //        var url ="https://www.kutub.info/downloadBook?book_id=eyJpdiI6IjFjZnl1Yko3QW5Qb0FDZ0Q4UHVrTUE9PSIsInZhbHVlIjoiVnRoaXR0WVJ3WjlZQWgyZzlWNUJhMVRGRE5SRWd5S3dndkRpVWRNZ1hjbkVXRFdBSVl0RUp3ZWZJL2htSVJ4TjRaV0xnczBIeFJQQStuQmt5VlJ6dmRWaHIvUmlJTGhrVkZIQ0ZxbnpqaWc9IiwibWFjIjoiOGQyMWMzMjE0ODk2NWQ3YmQ3NjdhNTlhNjBmNWNhNjgxODM4ZTE1Njk3ZGI4MmJmODVhMjc4ODRiMDA5MTc0ZCJ9"
 //       val dir = File("${getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)}/KFC/")
-
         var appName = "newFiles"
-
         var dir = File(Environment.getExternalStorageDirectory().toString() + "/${Environment.DIRECTORY_DOWNLOADS}/AHT/")
         var download = DownloadFile()
         download.setBaseURl("https://apkfab.com/upload/apk/")
@@ -88,7 +86,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
-
-
+*/
     }
 }
