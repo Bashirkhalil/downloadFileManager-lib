@@ -1,17 +1,26 @@
 pluginManagement {
     repositories {
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.google.com' }
         gradlePluginPortal()
         google()
         mavenCentral()
+        jcenter()
+
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.google.com' }
         google()
         mavenCentral()
+        jcenter()
     }
 }
+
 rootProject.name = "DownloadFileProject"
 include ':app'
 include ':DownloadFileManager'

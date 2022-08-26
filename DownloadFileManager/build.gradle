@@ -13,6 +13,7 @@ android {
         minSdk 17
         targetSdk 32
 
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -31,6 +32,13 @@ android {
         jvmTarget = '1.8'
     }
 
+    publishing {
+        multipleVariants {
+            withSourcesJar()
+            withJavadocJar()
+            allVariants()
+        }
+    }
 }
 afterEvaluate {
     publishing {
@@ -64,4 +72,8 @@ dependencies {
     def lifecycle_version = "2.5.0"
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+
+    // multidex
+    implementation 'androidx.multidex:multidex:2.0.0'
+
 }
