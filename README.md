@@ -1,8 +1,9 @@
-:slightly_smiling_face:  downloadFileManager-lib 
+## :slightly_smiling_face:  downloadFileManager-lib 
 
 [![](https://jitpack.io/v/Bashirkhalil/downloadFileManager-lib.svg)](https://jitpack.io/#Bashirkhalil/downloadFileManager-lib)
 
 
+## Features 
 
 1. set your custom directory otherwise default will be the download directory .
 2. set your custom name otherwise will be the "DefaultName" .
@@ -16,6 +17,12 @@
 		}
 	}
 	
+	
+## Gradle Setup
+
+
+
+## Gradle Setup
 	
 	``There is a literal backtick (`) here.``
 	``There is a literal backtick (`) here.``
