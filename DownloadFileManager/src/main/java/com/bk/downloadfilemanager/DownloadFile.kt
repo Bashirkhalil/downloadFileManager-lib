@@ -383,7 +383,6 @@ class DownloadFile {
                     fileSizeDownloaded += read.toLong()
 
                     var  value = (((fileSizeDownloaded * 100) / fileSize).toInt())
-
                     getListener()?.onDownloadProgress(fileSize,fileSizeDownloaded,value)
                 }
 
