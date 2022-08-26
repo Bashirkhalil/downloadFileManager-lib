@@ -8,7 +8,12 @@
 1. set your custom directory otherwise default will be the download directory .
 2. set your custom name otherwise will be the "DefaultName" .
 3. set you extension file [ apk - png - jpeg - pdf - pptx ] .
-4. mointor you download progress and customized with your best such as show user progress .
+4. mointor you download progress and customized with your best way such as show user progress .
+
+
+	
+	
+## Gradle [ setting or project  Level ]
 
 
 	allprojects {
@@ -16,13 +21,16 @@
 			maven { url 'https://jitpack.io' }
 		}
 	}
+
+## Gradle [   Module Level ]
 	
 	
-## Gradle Setup
+dependencies {
 
-
-
-## Gradle Setup
+    implementation 'com.github.Bashirkhalil:downloadFileManager-lib:v2.1.0'
+    
+}
+	
 	
 	``There is a literal backtick (`) here.``
 	``There is a literal backtick (`) here.``
