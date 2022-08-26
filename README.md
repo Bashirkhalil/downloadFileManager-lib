@@ -13,7 +13,7 @@
 
 	
 	
-## Gradle [ setting or project  Level ]
+##  :green_heart: Gradle [ setting or project  Level ]
 
 
 	allprojects {
@@ -22,7 +22,7 @@
 		}
 	}
 
-## Gradle [   Module Level ]
+## :green_heart: Gradle [   Module Level ]
 	
 	
      dependencies  {
@@ -30,7 +30,7 @@
      }
 	
 
-## Example 
+## :green_heart: Example 
 
       var  url ="http://shouji.360tpcdn.com/170918/93d1695d87df5a0c0002058afc0361f1/com.ss.android.article.news_636.apk"
 
@@ -99,3 +99,6 @@
         })
         download.build(this)
 
+
+
+please  :fist_raised: I belive on other people ability they can develop more you can contributor and update :muscle: .
