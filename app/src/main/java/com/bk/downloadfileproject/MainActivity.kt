@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onDownloadProgress(fileSize: Long, fileSizeDownloaded: Long, value: Int) {
-                Log.e(mTag, "file download=$fileSizeDownloaded of $fileSize -${fileSizeDownloaded / 1024} MB value=$value ")
+                Log.e(mTag, "fileSize =$fileSize  - file download=$fileSizeDownloaded of $fileSize -  ${fileSizeDownloaded / 1024} MB value=$value ")
             }
 
             override fun onDownloadFiled(status1: String?, status: Boolean) {
