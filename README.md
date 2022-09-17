@@ -101,4 +101,5 @@
 
 
 
-please  :fist_raised: I belive on other people ability they can develop more you can contributor and update :muscle: .
+- please  :fist_raised: I belive on other people ability they can develop more than this shit :sunglasses: you can contributor and update :muscle: .
+- For more info : :speech_balloon: My Likedin account http://t.ly/fAGK .
